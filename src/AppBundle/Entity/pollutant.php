@@ -10,6 +10,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\SerializerInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\pollutantRepository")
