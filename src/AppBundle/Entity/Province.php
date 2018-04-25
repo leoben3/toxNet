@@ -12,10 +12,15 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 /**
- * @ORM\Entity(repositoryClass="App\Repository\provinceRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ProvinceRepository")
  */
-class province
+class Province
 {
+    const AL = 'Alicante';
+    const CAS= 'Castellón';
+    const VAL= 'Valencia';
+
+
     /**
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id

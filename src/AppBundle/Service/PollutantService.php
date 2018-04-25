@@ -10,7 +10,7 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\pollutant;
 
-class pollutantService
+class PollutantService
 {
 
     protected $modelClass = pollutant::class;

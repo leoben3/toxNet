@@ -10,9 +10,9 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\annualRegister;
 
-class annualRegisterService
+class AnnualRegisterService
 {
-    protected $modelClass = annualRegister::class;
+    protected $modelClass = AnnualRegister::class;
 
     public function getAllByPollutantAndWeatherStation($doctrine,$idPollutant,$weatherStation)
     {

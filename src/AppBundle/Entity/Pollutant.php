@@ -13,9 +13,9 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\SerializerInterface;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\pollutantRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\PollutantRepository")
  */
-class pollutant
+class Pollutant
 {
     /**
      * @ORM\Column(name="id", type="integer")

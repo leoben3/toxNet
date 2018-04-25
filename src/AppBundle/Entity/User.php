@@ -10,9 +10,9 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 /**
- * @ORM\Entity(repositoryClass="App\Repository\userRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class user
+class User
 {
     /**
      * @ORM\Column(name="id", type="integer")
@@ -22,13 +22,17 @@ class user
     private $id;
 
     /**
-     * @ORM\Column(name="name", type="string", length=100)
+     * @ORM\Column(name="user", type="string", length=100)
      */
     private $userName;
 
+    /**
+     * @ORM\Column(name="user_type", type="string", length=100)
+     */
+    private $userType;
 
     /**
-     * @ORM\Column(name="name", type="string", length=100)
+     * @ORM\Column(name="password", type="string", length=100)
      */
     private $password;
 
@@ -80,9 +84,20 @@ class user
         $this->password = $password;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getUserType()
+    {
+        return $this->userType;
+    }
 
-
-
-
+    /**
+     * @param mixed $userType
+     */
+    public function setUserType($userType)
+    {
+        $this->userType = $userType;
+    }
 
 }

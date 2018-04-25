@@ -8,10 +8,10 @@
 
 namespace AppBundle\Repository;
 
-use AppBundle\Entity\annualRegister;
+use AppBundle\Entity\AnnualRegister;
 use Doctrine\ORM\EntityRepository;
 
-class annualRegisterRepository extends EntityRepository
+class AnnualRegisterRepository extends EntityRepository
 {
 
     public function findAllByPollutantAndWeatherStation($idPollutant,$weatherStation)
@@ -20,7 +20,7 @@ class annualRegisterRepository extends EntityRepository
         $qb = $em->createQueryBuilder();
 
         $qb->select('p')
-            ->from(annualRegister::class, 'p')
+            ->from(AnnualRegister::class, 'p')
             ->where('p.pollutant = :idPollutant')
             ->andWhere('p.$weatherStation = :idWeatherStation')
             ->setParameters(array(

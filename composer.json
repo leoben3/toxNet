@@ -4,7 +4,7 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/doctrine-bundle": "^1.9",
         "doctrine/orm": "^2.5",
         "friendsofsymfony/rest-bundle": "^2.3",
         "incenteev/composer-parameter-handler": "^2.0",
@@ -34,6 +34,7 @@
         ]
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.0",
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },

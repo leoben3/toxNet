@@ -13,9 +13,9 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\annualRegisterRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\AnnualRegisterRepository")
  */
-class annualRegister
+class AnnualRegister
 {
 
     /**

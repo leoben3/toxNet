@@ -13,10 +13,22 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\weatherStationRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\WeatherStationRepository")
  */
-class weatherStation
+class WeatherStation
 {
+
+    const AG = 'Agost';
+    const AL_PLA = 'Alacant-El Pla';
+    const AL_RAB = 'Alacant-Rabassa';
+    const AL_FLOR = 'Alacant-Florida Babel';
+    const ALC_VER = 'Alcoi-Verge dels Lliris';
+    const BEN = 'Benidorm';
+    const ELX_AGRO = 'Elx-Agroalimentari';
+    const ELX_PARC = 'Elx-Parc de bombers';
+
+
+
     /**
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
