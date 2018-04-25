@@ -23,8 +23,6 @@ class ProvinceFixtures extends Fixture
 
     ];
 
-
-
     public function load(ObjectManager $manager)
     {
 

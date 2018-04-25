@@ -17,7 +17,6 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class WeatherStation
 {
-
     const AG = 'Agost';
     const AL_PLA = 'Alacant-El Pla';
     const AL_RAB = 'Alacant-Rabassa';
@@ -26,7 +25,24 @@ class WeatherStation
     const BEN = 'Benidorm';
     const ELX_AGRO = 'Elx-Agroalimentari';
     const ELX_PARC = 'Elx-Parc de bombers';
-
+    const CAS_PEN = 'Castelló-Penyeta';
+    const CAS_ERM = 'Castelló-Ermita';
+    const CAS_GRA = 'Castelló-Grau';
+    const BENIC = 'Benicássim';
+    const BURR = 'Burriana';
+    const OND = 'Onda';
+    const VIL ='Vila-Real PM';
+    const BURJ ='Burjassot-Facultats';
+    const GAND = 'Gandia';
+    const BU = 'Buñol';
+    const SAG_PORT = 'Sagunt-Port';
+    const SAG_NORD = 'Sagunt-Nord';
+    const PAT = 'Paterna-CEAM';
+    const VAL_ALB = 'Valencia-Albufera';
+    const VAL_VIV = 'Valencia-Vivers';
+    const VAL_SIL = 'Valencia-Pista de Silla';
+    const VAL_POL = 'Valencia-Politècnic';
+    const VAL_FR = 'Valencia-Avd.Francia';
 
 
     /**
@@ -46,10 +62,6 @@ class WeatherStation
      */
     private $province;
 
-    /**
-     * @ORM\Column (name="location", type="string", length=100)
-     */
-    private $location;
 
     public function __construct()
     {
@@ -102,22 +114,6 @@ class WeatherStation
     public function setProvince($province)
     {
         $this->province = $province;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLocation()
-    {
-        return $this->location;
-    }
-
-    /**
-     * @param mixed $location
-     */
-    public function setLocation($location)
-    {
-        $this->location = $location;
     }
 
 
