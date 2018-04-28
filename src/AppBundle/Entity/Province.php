@@ -12,7 +12,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ProvinceRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ProvinceRepository")
  */
 class Province
 {
