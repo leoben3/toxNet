@@ -27,7 +27,7 @@ class ProvinceFixtures extends Fixture
     {
         foreach (self::PROVINCE_NAMES as $provinces){
 
-            $obj = $manager->getRepository('AppBundle\Entity\Province')->findBy(['name' =>$provinces]);
+            $obj = $manager->getRepository(Province::class)->findOneBy(['name' =>$provinces]);
             if(!$obj){
                 $province = new Province();
                 $province->setName($provinces);

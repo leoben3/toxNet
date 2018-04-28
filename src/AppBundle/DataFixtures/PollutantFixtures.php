@@ -32,8 +32,8 @@ class PollutantFixtures extends Fixture
 
             $pollutant = new Pollutant();
 
-            $obj = $manager->getRepository('AppBundle\Entity\Pollutant')
-                ->findBy(['name' =>$pollutants[self::POLLUTANT_NAME]]);
+            $obj = $manager->getRepository(Pollutant::class)
+                ->findOneBy(['name' =>$pollutants[self::POLLUTANT_NAME]]);
 
             if(!$obj){
                 $pollutant->setName($pollutants[self::POLLUTANT_NAME]);
