@@ -26,6 +26,7 @@ class AnnualRegisterRepositoryTest extends KernelTestCase
     {
         parent::setUp();
 
+
         $kernel = self::bootKernel();
 
         $this->em = $kernel->getContainer()->get('doctrine')->getManager();
