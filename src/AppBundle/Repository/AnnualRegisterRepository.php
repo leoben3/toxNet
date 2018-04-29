@@ -14,7 +14,7 @@ use Doctrine\ORM\EntityRepository;
 class AnnualRegisterRepository extends EntityRepository
 {
 
-    public function findAllByPollutantAndWeatherStation($idPollutant,$weatherStation)
+    public function findAllByPollutantAndWeatherStation($idPollutant,$idWeatherStation)
     {
         $em = $this->getEntityManager();
         $qb = $em->createQueryBuilder();
@@ -26,7 +26,7 @@ class AnnualRegisterRepository extends EntityRepository
             ->setParameters(array(
 
                 'idPollutant' => $idPollutant,
-                'idWeatherStation' => $weatherStation
+                'idWeatherStation' => $idWeatherStation
             ))
             ->orderBy('p.year','DESC');
 
