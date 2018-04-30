@@ -17,6 +17,12 @@ use Symfony\Component\Serializer\SerializerInterface;
  */
 class Pollutant
 {
+    const PM10 = 'Material particulado de 10 micras';
+    const PM25 = 'Material particulado de 2.5 micras';
+    const NO2 = 'Dióxido de nitrógeno';
+    
+
+
     /**
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
