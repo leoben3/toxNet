@@ -7,6 +7,7 @@ use AppBundle\Entity\Pollutant;
 use AppBundle\Entity\WeatherStation;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
+
 class AnnualRegisterRepositoryTest extends KernelTestCase
 {
 
@@ -26,11 +27,8 @@ class AnnualRegisterRepositoryTest extends KernelTestCase
     {
         parent::setUp();
 
-
         $kernel = self::bootKernel();
-
         $this->em = $kernel->getContainer()->get('doctrine')->getManager();
-
     }
 
     protected function tearDown()
@@ -41,15 +39,14 @@ class AnnualRegisterRepositoryTest extends KernelTestCase
         $this->em = null;
     }
 
-
     public function testFindAllAnnualRegisterByPollutantAndWeatherStationWhenExists()
     {
         $this->createAnnualRegisterAndAssociatedObjects();
 
         $annualRepository = $this->em->getRepository(AnnualRegister::class)
-            ->findAllByPollutantAndWeatherStation($this->objPollutant->getId, $this->objWeatherStation->getId);
+            ->getAllByPollutantAndWeatherStation($this->objPollutant->getId(),$this->objWeatherStation->getId());
 
-        $this->assertEquals(28.45, $annualRepository->getAnnualMeanConcentration);
+        $this->assertEquals(28.45, $annualRepository[0]->getAnnualMeanConcentration());
     }
 
     public function createAnnualRegisterAndAssociatedObjects()
