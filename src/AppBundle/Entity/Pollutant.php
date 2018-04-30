@@ -17,11 +17,36 @@ use Symfony\Component\Serializer\SerializerInterface;
  */
 class Pollutant
 {
+<<<<<<< HEAD
     const PM10 = 'Material particulado de 10 micras';
     const PM25 = 'Material particulado de 2.5 micras';
     const NO2 = 'Dióxido de nitrógeno';
     
 
+=======
+    const PM10 = 'Material Particulado de 10 micras';
+    const PM25 = 'Material Particulado de 2.5 micras';
+    const NOx = 'Óxidos de nitrógeno';
+    const PB = 'Plomo';
+
+    const PRIM = 'Contaminante Primario';
+    const SEC = 'Contaminante Secundario';
+
+    const PM10_MECH = 'Inflamación de las vías aéreas y estrés oxidativo';
+    const PM25_MECH ='Inflamación de las vías aéreas y estrés oxidativo';
+    const NOx_MECH ='Inhibición irreversible de enzimas dependientes del zinc';
+    const PB_MECH = 'Neurotóxico';
+
+    const PM10_EFF = 'Lesiones en las vías respiratorias y en los pulmones. Reducción de la capacidad pulmonar y una
+    mayor sensibilidad a los alérgenos. Con exposiciones prolongadas se han observado cambios irreversibles en la
+    estructura y función de los pulmones';
+    const PM25_EFF = 'Más peligrosas que las de 10 micras. Su menor tamaño les permite adentrarse en el aparato respiratorio
+    y depositarse en los alveolos pulmonares e incluso llegar al torrente sanguíneo. Producen enfermedades respiratorias
+    como bronquitis, dolencias de tipo cardiovascular, asmas y alergias';
+    const NOx_EFF = 'Bronquitis en niños asmáticos y disminución del desarrollo de la función pulmonar';
+    const PB_EFF = 'Se deposita en el esqueleto. Produce saturnismo que incluye, entre otros efectos, anemia, diarrea,
+    nauseas, sabor metálico y dulzón, irritabilidad y dolores musculares.';
+>>>>>>> 6220c32bab42265c5d7fa9aaa00ee0aa21547c69
 
     /**
      * @ORM\Column(name="id", type="integer")

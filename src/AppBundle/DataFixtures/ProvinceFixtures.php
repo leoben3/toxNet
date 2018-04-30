@@ -25,7 +25,16 @@ class ProvinceFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
+        foreach (self::PROVINCE_NAMES as $provinces){
 
+            $obj = $manager->getRepository(Province::class)->findOneBy(['name' =>$provinces]);
+            if(!$obj){
+                $province = new Province();
+                $province->setName($provinces);
+                $manager->persist($province);
+            }
+        }
+        $manager->flush();
     }
 
 

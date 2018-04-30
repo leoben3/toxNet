@@ -13,7 +13,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\WeatherStationRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\WeatherStationRepository")
  */
 class WeatherStation
 {

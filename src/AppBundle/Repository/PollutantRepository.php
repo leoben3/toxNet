@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ruben
- * Date: 17/04/2018
- * Time: 17:09
- */
 
 namespace AppBundle\Repository;
 
@@ -16,3 +10,4 @@ class PollutantRepository extends EntityRepository
 
 
 }
+
