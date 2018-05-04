@@ -4,7 +4,7 @@
 namespace AppBundle\Controller;
 
 
-class WeatherStationController
+class AnnualRegisterController
 {
 
 }
