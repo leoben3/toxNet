@@ -4,7 +4,6 @@ namespace AppBundle\Controller;
 
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,24 +25,23 @@ class DefaultController extends FOSRestController
         $this->serializer = new Serializer($this->normalizers, $this->encoders);
     }
 
-    protected function createApiResponse($data, $statusCode = Response::HTTP_OK, $serialization_group = null)
+    protected function createApiResponse($data, $statusCode = Response::HTTP_OK)
     {
-//        $json = $this->serialize($data, $serialization_group);
+        var_dump($data);
 
-        return new Response('json', $statusCode, [
+        $json = $this->serialize($data,'json');
+
+        return new Response($json, $statusCode, [
             'Content-Type' => 'application/json',
         ]);
 
     }
 
-//    protected function serialize($data, $serialization_group = null,  $format='json')
-//    {
-//
-//        $this->serializer->serialize($data, $format);
-//
-//
-//
-//    }
+    protected function serialize($data, $format)
+    {
+        return $this->serializer->serialize($data, $format);
+
+    }
 
 
 

@@ -41,10 +41,8 @@ class PollutantController extends DefaultController
     }
 
 
-    public function getPollutant(Request $request)
+    public function getPollutant($name)
     {
-        $name = $request->query->get('name');
-
         if(!$name){
             throw new BadRequestHttpException('El nombre introducido no es válido');
         }

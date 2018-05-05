@@ -14,8 +14,8 @@ class AnnualRegisterService extends BaseService
 {
     protected $modelClass = AnnualRegister::class;
 
-    public function getAllByPollutantAndWeatherStation($doctrine,$idPollutant,$weatherStation)
+    public function getAllByPollutantAndWeatherStation($doctrine,$idPollutant,$idWeatherStation)
     {
-        return $doctrine->getRepository($this->modelClass)->findAllByPollutantAndWeatherStation($idPollutant,$weatherStation);
+        return $doctrine->getRepository($this->modelClass)->findAllByPollutantAndWeatherStation($idPollutant,$idWeatherStation);
     }
 }
