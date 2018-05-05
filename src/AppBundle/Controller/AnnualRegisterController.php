@@ -39,15 +39,8 @@ class AnnualRegisterController extends DefaultController
         return $response;
     }
 
-    public function getAnnualRegister(Request $request)
+    public function getAnnualRegister($idPollutant, $idWeatherStation)
     {
-        $idPollutant = $request->query->get('idPollutant');
-        $idWeatherStation = $request->query->get('idWeather');
-
-        if((!$idPollutant)||(!$idWeatherStation)){
-            throw new BadRequestHttpException('Los parámetros introducidos no son válidos');
-        }
-
         $annualRegisterData = $this->getAnnualRegisterData($idPollutant, $idWeatherStation);
 
         $responseData = ['data' => ['annualRegister' => $annualRegisterData]];

@@ -27,8 +27,6 @@ class DefaultController extends FOSRestController
 
     protected function createApiResponse($data, $statusCode = Response::HTTP_OK)
     {
-        var_dump($data);
-
         $json = $this->serialize($data,'json');
 
         return new Response($json, $statusCode, [

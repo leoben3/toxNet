@@ -18,6 +18,6 @@ registers:
     methods: GET
 
 register_item:
-    path: '/annual_registers/{id}'
+    path: '/annual_register/{idPollutant}-{idWeatherStation}'
     controller: AppBundle\Controller\AnnualRegisterController::getAnnualRegister
     methods: GET

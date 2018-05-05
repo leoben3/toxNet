@@ -40,30 +40,22 @@ class PollutantController extends DefaultController
         return $response;
     }
 
-
     public function getPollutant($name)
     {
-        if(!$name){
-            throw new BadRequestHttpException('El nombre introducido no es válido');
-        }
-
         $pollutantData = $this->getPollutantData($name);
 
         $responseData = ['data' => ['pollutant' => $pollutantData]];
 
         return $this->createApiResponse($responseData, Response::HTTP_OK);
-
     }
 
     public function getPollutantData($name)
     {
         $pollutant = $this->pollutantService->findOneByName($this->doctrine, $name);
-
         if(!$pollutant){
 
             throw new NotFoundHttpException('Entidad no encontrada');
         }
-
         return $pollutant;
     }
 
