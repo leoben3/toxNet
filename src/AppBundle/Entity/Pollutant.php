@@ -10,7 +10,9 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+use Doctrine\Common\Annotations\AnnotationReader;
+use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
 
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\PollutantRepository")
@@ -48,6 +50,7 @@ class Pollutant
      */
     private $id;
     /**
+     * @Groups({"primaryInformationGroup"})
      * @ORM\Column(name="name", type="string", length=50)
      */
     private $name;
@@ -63,9 +66,18 @@ class Pollutant
     private $mechanismAction;
 
     /**
+     * @Groups({"primaryInformationGroup"})
      * @ORM\Column(name="effects", type="text")
      */
     private $effects;
+
+    private $classMetadataFactory;
+
+
+    public function __construct($classMetadataFactory)
+    {
+        $this->classMetadataFactory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
+    }
 
     /**
      * @return mixed
@@ -146,9 +158,5 @@ class Pollutant
     {
         $this->effects = $effects;
     }
-
-
-
-
 
 }

@@ -10,7 +10,7 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\annualRegister;
 
-class AnnualRegisterService
+class AnnualRegisterService extends BaseService
 {
     protected $modelClass = AnnualRegister::class;
 

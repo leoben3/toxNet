@@ -8,7 +8,7 @@ pollutants:
     methods: GET
 
 pollutant_item:
-    path: '/pollutants/{id}'
+    path: '/pollutants/{name}'
     controller: AppBundle\Controller\PollutantController::getPollutant
     methods: GET
 
