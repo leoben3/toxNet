@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ruben
- * Date: 17/04/2018
- * Time: 16:35
- */
 
 
 namespace AppBundle\Entity;
@@ -12,6 +6,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
 use Doctrine\Common\Annotations\AnnotationReader;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
 
 /**
@@ -49,6 +44,7 @@ class Pollutant
      * @ORM\GeneratedValue;
      */
     private $id;
+
     /**
      * @Groups({"primaryInformationGroup"})
      * @ORM\Column(name="name", type="string", length=50)

@@ -8,11 +8,11 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\pollutant;
+use AppBundle\Entity\Pollutant;
 
 class PollutantService extends BaseService
 {
-    protected $modelClass = pollutant::class;
+    protected $modelClass = Pollutant::class;
 
     public function findOneByName($doctrine, $name)
     {

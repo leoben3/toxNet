@@ -26,12 +26,12 @@ class AnnualRegister
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="weatherStation")
+     * @ORM\ManyToOne(targetEntity="WeatherStation")
      */
     private $weatherStation;
 
     /**
-     * @ORM\ManyToOne(targetEntity="pollutant")
+     * @ORM\ManyToOne(targetEntity="Pollutant")
      */
     private $pollutant;
 

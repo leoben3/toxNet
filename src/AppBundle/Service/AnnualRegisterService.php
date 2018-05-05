@@ -8,7 +8,7 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\annualRegister;
+use AppBundle\Entity\AnnualRegister;
 
 class AnnualRegisterService extends BaseService
 {

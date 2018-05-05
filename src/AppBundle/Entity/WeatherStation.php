@@ -58,7 +58,7 @@ class WeatherStation
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="province")
+     * @ORM\ManyToOne(targetEntity="Province")
      */
     private $province;
 
