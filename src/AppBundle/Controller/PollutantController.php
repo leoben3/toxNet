@@ -12,6 +12,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Translation\TranslatorInterface;
 
+
 class PollutantController extends DefaultController
 {
 
@@ -29,7 +30,6 @@ class PollutantController extends DefaultController
         $this->doctrine = $doctrine;
         $this->translator = $translator;
     }
-
 
     public function getPollutants()
     {
