@@ -1,3 +1,23 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+pollutants:
+    path: '/pollutants/'
+    controller: AppBundle\Controller\PollutantController::getPollutants
+    methods: GET
+
+pollutant_item:
+    path: '/pollutants/{id}'
+    controller: AppBundle\Controller\PollutantController::getPollutant
+    methods: GET
+
+registers:
+    path: '/annual_registers/'
+    controller: AppBundle\Controller\AnnualRegisterController::getAnnualRegisters
+    methods: GET
+
+register_item:
+    path: '/annual_registers/{id}'
+    controller: AppBundle\Controller\AnnualRegisterController::getAnnualRegister
+    methods: GET
