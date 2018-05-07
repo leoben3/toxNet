@@ -11,6 +11,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\MaxDepth;
 
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\AnnualRegisterRepository")
@@ -27,11 +28,13 @@ class AnnualRegister
 
     /**
      * @ORM\ManyToOne(targetEntity="WeatherStation")
+     * @MaxDepth(2)
      */
     private $weatherStation;
 
     /**
      * @ORM\ManyToOne(targetEntity="Pollutant")
+     * @MaxDepth(2)
      */
     private $pollutant;
 

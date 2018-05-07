@@ -46,10 +46,10 @@ class AnnualRegisterController extends DefaultController
         return $this->createApiResponse($responseData, Response::HTTP_OK);
     }
 
-    public function getAnnualRegisterData($id, $weatherStation)
+    public function getAnnualRegisterData($idPollutant, $idWeatherStation)
     {
         $annualRegister = $this->annualRegisterService
-            ->getAllByPollutantAndWeatherStation($this->doctrine,$id,$weatherStation);
+            ->getAllByPollutantAndWeatherStation($this->doctrine,$idPollutant,$idWeatherStation);
 
         if(!$annualRegister){
 

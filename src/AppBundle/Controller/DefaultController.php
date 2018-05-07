@@ -53,7 +53,8 @@ class DefaultController extends FOSRestController
     protected function normalize($dataArray){
 
         $dataToNormalize = $dataArray;
-        $data = $this->serializer->normalize($dataToNormalize,null,['groups'=>['primaryInformationGroup']]);
+        $data = $this->serializer->normalize($dataToNormalize,null,array('enable_max_depth' => true),
+            ['groups'=>['primaryInformationGroup']]);
 
         return $data;
 
