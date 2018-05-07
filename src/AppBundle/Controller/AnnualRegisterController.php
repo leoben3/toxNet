@@ -32,7 +32,7 @@ class AnnualRegisterController extends DefaultController
     public function getAnnualRegisters()
     {
         $annualRegisters = $this->annualRegisterService->findAll($this->doctrine);
-        $response = $this->createApiResponse($annualRegisters, Response::HTTP_OK);
+        $response = $this->createApiResponse($annualRegisters, 'secondaryInformationGroup',Response::HTTP_OK);
 
         return $response;
     }
@@ -43,7 +43,7 @@ class AnnualRegisterController extends DefaultController
 
         $responseData = ['data' => ['annualRegister' => $annualRegisterData]];
 
-        return $this->createApiResponse($responseData, Response::HTTP_OK);
+        return $this->createApiResponse($responseData, 'secondaryInformationGroup',Response::HTTP_OK);
     }
 
     public function getAnnualRegisterData($idPollutant, $idWeatherStation)

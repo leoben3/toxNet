@@ -55,13 +55,13 @@ class WeatherStation
 
     /**
      * @ORM\Column(name="name", type="string", length=100)
-     * @Groups({"primaryInformationGroup"})
+     * @Groups({"primaryInformationGroup","secondaryInformationGroup"})
      */
     private $name;
 
     /**
      * @ORM\ManyToOne(targetEntity="Province")
-     * @Groups({"primaryInformationGroup"})
+     * @Groups({"primaryInformationGroup","secondaryInformationGroup"})
      */
     private $province;
 

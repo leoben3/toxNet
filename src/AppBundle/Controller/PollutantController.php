@@ -33,7 +33,7 @@ class PollutantController extends DefaultController
     {
         $pollutants = $this->pollutantService->findAll($this->doctrine);
 
-        $response = $this->createApiResponse($pollutants, Response::HTTP_OK);
+        $response = $this->createApiResponse($pollutants, 'primaryInformationGroup',Response::HTTP_OK);
 
         return $response;
     }
@@ -44,7 +44,7 @@ class PollutantController extends DefaultController
 
         $responseData = ['data' => ['pollutant' => $pollutantData]];
 
-        return $this->createApiResponse($responseData, Response::HTTP_OK);
+        return $this->createApiResponse($responseData, 'primaryInformationGroup', Response::HTTP_OK);
     }
 
     public function getPollutantData($name)

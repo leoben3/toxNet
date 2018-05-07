@@ -31,12 +31,12 @@ class DefaultController extends FOSRestController
         $this->serializer = new Serializer($this->normalizers, $this->encoders);
     }
 
-    protected function createApiResponse($data, $statusCode = Response::HTTP_OK)
+    protected function createApiResponse($data, $serialization_group, $statusCode = Response::HTTP_OK)
     {
 
         $this->loadSerializer();
 
-        $arrayToEncode = $this->normalize($data);
+        $arrayToEncode = $this->normalize($data, $serialization_group);
         $json = $this->serialize($arrayToEncode,'json');
 
         return new Response($json, $statusCode, [
@@ -50,11 +50,11 @@ class DefaultController extends FOSRestController
         return $this->serializer->serialize($data, $format);
     }
 
-    protected function normalize($dataArray){
+    protected function normalize($dataArray,$serializationGroup){
 
         $dataToNormalize = $dataArray;
         $data = $this->serializer->normalize($dataToNormalize,null,array('enable_max_depth' => true,
-            'groups'=>['primaryInformationGroup']));
+            'groups'=>[$serializationGroup]));
 
         return $data;
 

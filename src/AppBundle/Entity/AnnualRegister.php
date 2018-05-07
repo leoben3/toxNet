@@ -29,27 +29,27 @@ class AnnualRegister
 
     /**
      * @ORM\ManyToOne(targetEntity="WeatherStation")
-     * @Groups({"primaryInformationGroup"})
+     * @Groups({"primaryInformationGroup","secondaryInformationGroup"})
      * @MaxDepth(2)
      */
     private $weatherStation;
 
     /**
      * @ORM\ManyToOne(targetEntity="Pollutant")
-     * @Groups({"primaryInformationGroup"})
+     * @Groups({"primaryInformationGroup","secondaryInformationGroup"})
      * @MaxDepth(2)
      */
     private $pollutant;
 
     /**
      * @ORM\Column(name="annual_mean_concentration", type="decimal", precision=4, scale=2)
-     * @Groups({"primaryInformationGroup"})
+     * @Groups({"primaryInformationGroup","secondaryInformationGroup"})
      */
     private $annualMeanConcentration;
 
     /**
      * @ORM\Column(name="year", type="integer")
-     * @Groups({"primaryInformationGroup"})
+     * @Groups({"primaryInformationGroup","secondaryInformationGroup"})
      */
     private $year;
 

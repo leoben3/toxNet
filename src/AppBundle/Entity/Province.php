@@ -31,7 +31,7 @@ class Province
 
     /**
      * @ORM\Column(name="name", type="string", length=100)
-     * @Groups({"primaryInformationGroup"})
+     * @Groups({"primaryInformationGroup","secondaryInformationGroup"})
      */
     private $name;
 

@@ -44,7 +44,7 @@ class Pollutant
     private $id;
 
     /**
-     * @Groups({"primaryInformationGroup"})
+     * @Groups({"primaryInformationGroup","secondaryInformationGroup"})
      * @ORM\Column(name="name", type="string", length=50)
      */
     private $name;
