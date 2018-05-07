@@ -72,7 +72,7 @@ class WeatherStation
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getId()
     {
@@ -80,15 +80,7 @@ class WeatherStation
     }
 
     /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
+     * @return string
      */
     public function getName()
     {
@@ -96,7 +88,7 @@ class WeatherStation
     }
 
     /**
-     * @param mixed $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -104,7 +96,7 @@ class WeatherStation
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getProvince()
     {
@@ -112,7 +104,7 @@ class WeatherStation
     }
 
     /**
-     * @param mixed $province
+     * @param string $province
      */
     public function setProvince($province)
     {

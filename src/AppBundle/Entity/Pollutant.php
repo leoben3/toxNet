@@ -66,7 +66,7 @@ class Pollutant
     private $effects;
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getId()
     {
@@ -74,15 +74,7 @@ class Pollutant
     }
 
     /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
+     * @return string
      */
     public function getName()
     {
@@ -90,7 +82,7 @@ class Pollutant
     }
 
     /**
-     * @param mixed $name
+     * @param string $name
      */
     public function setName($name)
     {
@@ -98,7 +90,7 @@ class Pollutant
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getType()
     {
@@ -106,7 +98,7 @@ class Pollutant
     }
 
     /**
-     * @param mixed $type
+     * @param string $type
      */
     public function setType($type)
     {
@@ -114,7 +106,7 @@ class Pollutant
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getMechanismAction()
     {
@@ -122,7 +114,7 @@ class Pollutant
     }
 
     /**
-     * @param mixed $mechanismAction
+     * @param string $mechanismAction
      */
     public function setMechanismAction($mechanismAction)
     {
@@ -130,7 +122,7 @@ class Pollutant
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getEffects()
     {
@@ -138,7 +130,7 @@ class Pollutant
     }
 
     /**
-     * @param mixed $effects
+     * @param string $effects
      */
     public function setEffects($effects)
     {

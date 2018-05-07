@@ -61,7 +61,7 @@ class AnnualRegister
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getId()
     {
@@ -69,15 +69,7 @@ class AnnualRegister
     }
 
     /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
+     * @return WeatherStation
      */
     public function getWeatherStation()
     {
@@ -85,7 +77,7 @@ class AnnualRegister
     }
 
     /**
-     * @param mixed $weatherStation
+     * @param WeatherStation $weatherStation
      */
     public function setWeatherStation($weatherStation)
     {
@@ -93,7 +85,7 @@ class AnnualRegister
     }
 
     /**
-     * @return mixed
+     * @return Pollutant
      */
     public function getPollutant()
     {
@@ -101,7 +93,7 @@ class AnnualRegister
     }
 
     /**
-     * @param mixed $pollutant
+     * @param Pollutant $pollutant
      */
     public function setPollutant($pollutant)
     {
@@ -109,7 +101,7 @@ class AnnualRegister
     }
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getAnnualMeanConcentration()
     {
@@ -117,7 +109,7 @@ class AnnualRegister
     }
 
     /**
-     * @param mixed $annualMeanConcentration
+     * @param float $annualMeanConcentration
      */
     public function setAnnualMeanConcentration($annualMeanConcentration)
     {
@@ -125,7 +117,7 @@ class AnnualRegister
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getYear()
     {
@@ -133,7 +125,7 @@ class AnnualRegister
     }
 
     /**
-     * @param mixed $year
+     * @param int $year
      */
     public function setYear($year)
     {

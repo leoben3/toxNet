@@ -36,7 +36,7 @@ class Province
     private $name;
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getId()
     {
@@ -44,15 +44,7 @@ class Province
     }
 
     /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
+     * @return string
      */
     public function getName()
     {
@@ -60,7 +52,7 @@ class Province
     }
 
     /**
-     * @param mixed $name
+     * @param string $name
      */
     public function setName($name)
     {
