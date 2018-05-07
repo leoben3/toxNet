@@ -5,10 +5,8 @@ namespace AppBundle\Controller;
 
 
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Service\AnnualRegisterService;
 use Symfony\Bridge\Doctrine\RegistryInterface;
-use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Translation\TranslatorInterface;
 

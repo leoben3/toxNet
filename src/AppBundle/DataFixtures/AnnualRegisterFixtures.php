@@ -23,11 +23,11 @@ class AnnualRegisterFixtures extends Fixture implements DependentFixtureInterfac
         [WeatherStation::VAL_ALB, Pollutant::NOx, 65.4, 2016],
         [WeatherStation::VAL_ALB, Pollutant::PM10, 90.4, 2016],
         [WeatherStation::VAL_ALB, Pollutant::PM25, 93.78, 2016],
-        [WeatherStation::CAS_GRA, Pollutant::NOx, 123.4, 2016],
+        [WeatherStation::CAS_GRA, Pollutant::NOx, 12.4, 2016],
         [WeatherStation::CAS_ERM, Pollutant::PB, 10.5, 2016],
         [WeatherStation::VAL_FR, Pollutant::PB, 23.5, 2015],
-        [WeatherStation::VAL_FR, Pollutant::PM25, 124.5, 2015],
-        [WeatherStation::VAL_FR, Pollutant::NOx, 328.43, 2015],
+        [WeatherStation::VAL_FR, Pollutant::PM25, 12.5, 2015],
+        [WeatherStation::VAL_FR, Pollutant::NOx, 32.4, 2015],
     ];
 
     const WEATHER_STATION = 0;

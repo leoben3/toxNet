@@ -23,7 +23,7 @@ class DefaultController extends FOSRestController
 
     private $metadata;
 
-    public function __construct()
+    protected function loadSerializer()
     {
         $this->metadata = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
         $this->normalizers = array(new ObjectNormalizer($this->metadata));
@@ -33,9 +33,11 @@ class DefaultController extends FOSRestController
 
     protected function createApiResponse($data, $statusCode = Response::HTTP_OK)
     {
-        var_dump($data);
+
+        $this->loadSerializer();
+
         $arrayToEncode = $this->normalize($data);
-        $json = $this->serialize($data,'json');
+        $json = $this->serialize($arrayToEncode,'json');
 
         return new Response($json, $statusCode, [
             'Content-Type' => 'application/json',
@@ -46,12 +48,11 @@ class DefaultController extends FOSRestController
     protected function serialize($data, $format)
     {
         return $this->serializer->serialize($data, $format);
-
     }
 
     protected function normalize($dataArray){
 
-        $dataToNormalize = $dataArray['data']['pollutant'];
+        $dataToNormalize = $dataArray;
         $data = $this->serializer->normalize($dataToNormalize,null,['groups'=>['primaryInformationGroup']]);
 
         return $data;
