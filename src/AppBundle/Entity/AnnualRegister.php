@@ -11,6 +11,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Serializer\Annotation\MaxDepth;
 
 /**
@@ -28,23 +29,27 @@ class AnnualRegister
 
     /**
      * @ORM\ManyToOne(targetEntity="WeatherStation")
+     * @Groups({"primaryInformationGroup"})
      * @MaxDepth(2)
      */
     private $weatherStation;
 
     /**
      * @ORM\ManyToOne(targetEntity="Pollutant")
+     * @Groups({"primaryInformationGroup"})
      * @MaxDepth(2)
      */
     private $pollutant;
 
     /**
      * @ORM\Column(name="annual_mean_concentration", type="decimal", precision=4, scale=2)
+     * @Groups({"primaryInformationGroup"})
      */
     private $annualMeanConcentration;
 
     /**
      * @ORM\Column(name="year", type="integer")
+     * @Groups({"primaryInformationGroup"})
      */
     private $year;
 

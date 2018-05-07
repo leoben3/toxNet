@@ -10,6 +10,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 
 /**
@@ -54,11 +55,13 @@ class WeatherStation
 
     /**
      * @ORM\Column(name="name", type="string", length=100)
+     * @Groups({"primaryInformationGroup"})
      */
     private $name;
 
     /**
      * @ORM\ManyToOne(targetEntity="Province")
+     * @Groups({"primaryInformationGroup"})
      */
     private $province;
 

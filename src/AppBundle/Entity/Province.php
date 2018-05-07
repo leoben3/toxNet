@@ -11,6 +11,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ProvinceRepository")
  */
@@ -30,6 +31,7 @@ class Province
 
     /**
      * @ORM\Column(name="name", type="string", length=100)
+     * @Groups({"primaryInformationGroup"})
      */
     private $name;
 
