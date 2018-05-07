@@ -25,15 +25,15 @@ class Pollutant
     const NOx_MECH ='Inhibición irreversible de enzimas dependientes del zinc';
     const PB_MECH = 'Neurotóxico';
 
-    const PM10_EFF = 'Lesiones en las vías respiratorias y en los pulmones. Reducción de la capacidad pulmonar y una
-    mayor sensibilidad a los alérgenos. Con exposiciones prolongadas se han observado cambios irreversibles en la
-    estructura y función de los pulmones';
-    const PM25_EFF = 'Más peligrosas que las de 10 micras. Su menor tamaño les permite adentrarse en el aparato respiratorio
-    y depositarse en los alveolos pulmonares e incluso llegar al torrente sanguíneo. Producen enfermedades respiratorias
-    como bronquitis, dolencias de tipo cardiovascular, asmas y alergias';
+    const PM10_EFF = 'Lesiones en las vías respiratorias y en los pulmones. Reducción de la capacidad pulmonar y una'.
+    ' mayor sensibilidad a los alérgenos. Con exposiciones prolongadas se han observado cambios irreversibles en la'.
+    ' estructura y función de los pulmones';
+    const PM25_EFF = 'Más peligrosas que las de 10 micras. Su menor tamaño les permite adentrarse en el aparato respiratorio'.
+    ' y depositarse en los alveolos pulmonares e incluso llegar al torrente sanguíneo. Producen enfermedades respiratorias'.
+    ' como bronquitis, dolencias de tipo cardiovascular, asmas y alergias';
     const NOx_EFF = 'Bronquitis en niños asmáticos y disminución del desarrollo de la función pulmonar';
-    const PB_EFF = 'Se deposita en el esqueleto. Produce saturnismo que incluye, entre otros efectos, anemia, diarrea,
-    nauseas, sabor metálico y dulzón, irritabilidad y dolores musculares.';
+    const PB_EFF = 'Se deposita en el esqueleto. Produce saturnismo que incluye, entre otros efectos, anemia, diarrea,'.
+    ' nauseas, sabor metálico y dulzón, irritabilidad y dolores musculares.';
 
 
     /**
