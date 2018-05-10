@@ -3,15 +3,14 @@
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 
-class AnnualRegisterControllerTest extends WebTestCase
+class PollutantControllerTest extends WebTestCase
 {
     private $client;
     private $container;
     private $router;
 
-    const WEATHER_STATION_EXISTING_ID = 42;
-    const POLLUTANT_EXISTING_ID = 7;
-    const POLLUTANT_NOT_EXISTING_ID = 50;
+    const POLLUTANT_EXISTING_NAME = 'Plomo';
+    const POLLUTANT_NOT_EXISTING_NAME = 'Nombre-No-Existente';
 
     protected function setUp()
     {
@@ -20,6 +19,7 @@ class AnnualRegisterControllerTest extends WebTestCase
         $this->client = $this->createClient();
         $this->container = $this->client->getKernel()->getContainer();
         $this->router = $this->container->get('router');
+
     }
 
     protected function tearDown()
@@ -31,24 +31,22 @@ class AnnualRegisterControllerTest extends WebTestCase
         $this->router = null;
     }
 
-    public function testGetAnnualRegisterReturns200WhenBothParametersAreOk()
+    public function testGetPollutantReturns200WhenParameterIsOk()
     {
-        $url = $this->router->generate('register_item', ['idPollutant' => self::POLLUTANT_EXISTING_ID,
-            'idWeatherStation' => self::WEATHER_STATION_EXISTING_ID]);
-
+        $url = $this->router->generate('pollutant_item', ['name' => self:: POLLUTANT_EXISTING_NAME]);
         $this->client->request('GET', $url);
 
         $this->assertEquals(Response::HTTP_OK, $this->client->getResponse()->getStatusCode());
     }
 
-    public function testGetAnnualRegisterReturns404WhenBothParametersAreNotOk()
+    public function testGetPollutantReturns404WhenParameterIsNotOk()
     {
-        $url = $this->router->generate('register_item', ['idPollutant' => self::WEATHER_STATION_EXISTING_ID,
-            'idWeatherStation' => self::POLLUTANT_NOT_EXISTING_ID]);
+        $url = $this->router->generate('pollutant_item', ['name' => self::POLLUTANT_NOT_EXISTING_NAME]);
         $this->client->request('GET', $url);
 
         $this->assertEquals(Response::HTTP_NOT_FOUND, $this->client->getResponse()->getStatusCode());
     }
+
 
 
 }
