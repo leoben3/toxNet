@@ -42,7 +42,7 @@ class AnnualRegisterRepositoryTest extends KernelTestCase
     /**
      * @throws \Doctrine\ORM\ORMException
      */
-    public function testFindAllAnnualRegisterByPollutantAndWeatherStationWhenExists()
+    public function testGetAllByPollutantAndWeatherStationReturnsGetAnnualMeanConcentrationWhenExists()
     {
         $this->createAnnualRegisterAndAssociatedObjects();
 
@@ -50,6 +50,16 @@ class AnnualRegisterRepositoryTest extends KernelTestCase
             ->getAllByPollutantAndWeatherStation($this->objPollutant->getId(),$this->objWeatherStation->getId());
 
         $this->assertEquals(28.45, $annualRepository[0]->getAnnualMeanConcentration());
+    }
+
+    public function testGetAllByPollutantAndWeatherStationNotReturnsGetAnnualMeanConcentrationWhenNotExists()
+    {
+        $this->createAnnualRegisterAndAssociatedObjects();
+
+        $annualRepository = $this->em->getRepository(AnnualRegister::class)
+            ->getAllByPollutantAndWeatherStation($this->objPollutant->getId(),$this->objWeatherStation->getId());
+
+        $this->assertNotEquals(29.45, $annualRepository[0]->getAnnualMeanConcentration());
     }
 
     /**

@@ -9,8 +9,8 @@ class AnnualRegisterControllerTest extends WebTestCase
     private $container;
     private $router;
 
-    const WEATHER_STATION_EXISTING_ID = 42;
-    const POLLUTANT_EXISTING_ID = 7;
+    const WEATHER_STATION_EXISTING_ID = 16;
+    const POLLUTANT_EXISTING_ID = 3;
     const POLLUTANT_NOT_EXISTING_ID = 50;
 
     protected function setUp()

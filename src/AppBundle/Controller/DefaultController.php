@@ -57,7 +57,6 @@ class DefaultController extends FOSRestController
             'groups'=>[$serializationGroup]));
 
         return $data;
-
     }
 
 
